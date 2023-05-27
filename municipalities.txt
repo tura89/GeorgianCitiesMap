@@ -1,68 +1,64 @@
-Tbilisi
-Azhara+(Upper+Abkhazia)+Municipality
-Batumi
-Keda+Municipality
-Kobuleti+Municipality
-Khelvachauri+Municipality
-Khulo+Municipality
-Shuakhevi+Municipality
-Chokhatauri+Municipality
-Lanchkhuti+Municipality
-Ozurgeti+Municipality
-Kutaisi
-Baghdati+Municipality
-Vani+Municipality
-Zestaponi+Municipality
-2024542
-Samtredia+Municipality
-Raion+Sachkhere
-Tqibuli+Municipality
-Tskaltubo+Municipality
-Raion+Chiatura
-Raion+Kharagauli
-2024536
-Akhmeta+Municipality
-Gurjaani+Municipality
-Dedoplistsqaro+Municipality
-Telavi+Municipality
-Raion+Lagodekhi
-Sagarejo+Municipality
-Signagi+Municipality
-Qvareli
-Dusheti+Municipality
-Tianeti+Municipality
-Mtskheta+Municipality
-Kazbegi+Municipality
-Ambrolauri+Municipality
-Lentekhi+Municipality
-Oni
-Tsageri+Municipality
-Poti
-Abasha+Municipality
-Zugdidi+Municipality
-Martvili+Municipality
-Mestia+Municipality
-Senaki+Municipality
-Chkhorotsqu+Municipality
-Tsalenjikha+Municipality
-Khobi+Municipality
-Adigeni+Municipality
-Aspindza+Municipality
-Akhalkalaki+Municipality
-Akhaltsikhe+Municipality
-Borjomi+Municipality
-Ninotsminda+Municipality
-Rustavi
-Bolnisi+Municipality
-Gardabani+Municipality
-Dmanisi+Municipality
-Tetritskaro+Municipality
-Marneuli+Municipality
-Tsalka+Municipality
-Gori+Municipality
-Kaspi+Municipality
-Kareli+Municipality
-Khashuri+Municipality
-Eredvi+Municipality
-Tighvi+Municipality
-Kurta+Municipality
+Tbilisi - 1202731
+Batumi - 172063
+Keda+Municipality - 16700
+Kobuleti+Municipality - 71843
+Khelvachauri+Municipality - 52737
+Khulo+Municipality - 26626
+Shuakhevi+Municipality - 14936
+Chokhatauri+Municipality - 17851
+Lanchkhuti+Municipality - 29893
+Ozurgeti+Municipality - 59357
+Kutaisi - 134378
+Baghdati+Municipality - 18363
+Vani+Municipality - 21241
+Zestaponi+Municipality - 55142
+2024542 - 31427
+Samtredia+Municipality - 43448
+Raion+Sachkhere - 34848
+Tqibuli+Municipality - 17898
+Tskaltubo+Municipality - 46803
+Raion+Chiatura - 38231
+Raion+Kharagauli - 18571
+2024536 - 21123
+Akhmeta+Municipality - 28853
+Gurjaani+Municipality - 51814
+Dedoplistsqaro+Municipality - 20677
+Telavi+Municipality - 55113
+Raion+Lagodekhi - 41152
+Sagarejo+Municipality - 52335
+Signagi+Municipality - 29177
+Qvareli - 30457
+Dusheti+Municipality - 26328
+Tianeti+Municipality - 10274
+Mtskheta+Municipality - 53006
+Kazbegi+Municipality - 3781
+Ambrolauri+Municipality - 10405
+Lentekhi+Municipality - 4027
+Oni - 5563
+Tsageri+Municipality - 8505
+Poti - 41536
+Abasha+Municipality - 19560
+Zugdidi+Municipality - 99542
+Martvili+Municipality - 31495
+Mestia+Municipality - 9447
+Senaki+Municipality - 34315
+Chkhorotsqu+Municipality - 21361
+Tsalenjikha+Municipality - 23296
+Khobi+Municipality - 27806
+Adigeni+Municipality - 16092
+Aspindza+Municipality - 10587
+Akhalkalaki+Municipality - 41026
+Akhaltsikhe+Municipality - 39463
+Borjomi+Municipality - 24998
+Ninotsminda+Municipality - 18944
+Rustavi - 130072
+Bolnisi+Municipality - 56036
+Gardabani+Municipality - 80329
+Dmanisi+Municipality - 20922
+Tetritskaro+Municipality - 22485
+Marneuli+Municipality - 107824
+Tsalka+Municipality - 19679
+Gori+Municipality - 120569
+Kaspi+Municipality - 41795
+Kareli+Municipality - 40689
+Khashuri+Municipality - 51028

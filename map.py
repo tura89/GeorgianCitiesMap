@@ -1,3 +1,4 @@
+import json
 import os
 
 import folium
@@ -5,6 +6,18 @@ import requests
 import logging
 
 polygon_directory = 'polygons/'
+
+
+def population_brackets(pop):
+    pop = int(pop['geometry']['population'])
+    x = 'green'
+    if pop < 50000:
+        x = 'yellow'
+    if pop < 25000:
+        x = 'orange'
+    if pop < 10000:
+        x = 'red'
+    return {'fillColor': x}
 
 
 def main():
@@ -20,11 +33,11 @@ def main():
         tiles="Stamen Terrain"
     )
 
-    fg = folium.FeatureGroup(name='Cities with populations')
+    city_layer = folium.FeatureGroup(name='Cities with populations')
 
     for city in all_geo_cities.json()['records']:
         city = city['fields']
-        fg.add_child(
+        city_layer.add_child(
             folium.Marker(
                 location=city['coordinates'],
                 popup=F"{city['name'].replace('’', '')} - {city['population']}",
@@ -32,14 +45,23 @@ def main():
             )
         )
 
+    municipality_layer = folium.FeatureGroup(name='Municipalities by populations')
     for file in os.listdir(polygon_directory):
-        fg.add_child(
-            folium.GeoJson(
-                data=open(f'{polygon_directory}{file}', 'r', encoding='utf-8').read()
-            )
+        data = open(f'{polygon_directory}{file}', 'r', encoding='utf-8').read()
+        geojson = folium.GeoJson(
+            data=data,
+            style_function=population_brackets,
+            popup=lambda x: x['geometry']['population']
         )
 
-    _map.add_child(fg)
+        population = json.loads(data)['population']
+        folium.Popup(population).add_to(geojson)
+
+        municipality_layer.add_child(geojson)
+
+    _map.add_child(city_layer)
+    _map.add_child(municipality_layer)
+    _map.add_child(folium.LayerControl())
     _map.save('map.html')
     _map.show_in_browser()
 
