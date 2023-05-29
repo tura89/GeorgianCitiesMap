@@ -7,7 +7,7 @@ import logging
 import json
 import os
 import requests
-from config import POLYGON_DIRECTORY
+from config import POLYGON_DIRECTORY, DATA_DIRECTORY, MUNICIPALITIES_FILENAME
 
 
 def get_location_id(location):
@@ -63,7 +63,7 @@ def main():
     # list originally from
     # https://en.wikipedia.org/wiki/List_of_municipalities_in_Georgia_(country)#List_of_municipalities_as_of_2019
     # modified to match municipalities as they appear on https://nominatim.openstreetmap.org/
-    with open('municipalities.txt', 'r', encoding='utf-8') as municipalities_file:
+    with open(F'{DATA_DIRECTORY}{MUNICIPALITIES_FILENAME}', 'r', encoding='utf-8') as municipalities_file:
         municipalities = municipalities_file.read().splitlines()
 
     for municipality in municipalities:

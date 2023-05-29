@@ -4,8 +4,8 @@ import os
 
 import logging
 import folium
-import requests
-from config import POLYGON_DIRECTORY
+import pandas as pd
+from config import POLYGON_DIRECTORY, DATA_DIRECTORY, CITIES_FILENAME
 
 
 def population_brackets(pop):
@@ -34,18 +34,13 @@ def main():
     # populate the map with city markers
     city_layer = folium.FeatureGroup(name='Cities with populations')
 
-    all_geo_cities = requests.get(
-        "https://public.opendatasoft.com/api/records/1.0/search/?dataset=geonames-all-cities"
-        "-with-a-population-1000&rows=126&q=&facet=feature_code&facet=cou_name_en&facet=timezone"
-        "&refine.cou_name_en=Georgia", timeout=30
-    )
+    cities_df = pd.read_csv(f'{DATA_DIRECTORY}{CITIES_FILENAME}')
 
-    for city in all_geo_cities.json()['records']:
-        city = city['fields']
+    for _, city in cities_df.iterrows():
         city_layer.add_child(
             folium.Marker(
-                location=city['coordinates'],
-                popup=F"{city['name'].replace('’', '')} - {int(city['population']):,}",
+                location=[city['lat'], city['lon']],
+                popup=F"{city['name']} - {int(city['population']):,}",
                 icon=folium.Icon(color='green')
             )
         )
