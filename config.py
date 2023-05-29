@@ -1,0 +1,1 @@
+POLYGON_DIRECTORY = 'polygons/'

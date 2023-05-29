@@ -5,14 +5,13 @@ import os
 import logging
 import folium
 import requests
-
-POLYGON_DIRECTORY = 'polygons/'
+from config import POLYGON_DIRECTORY
 
 
 def population_brackets(pop):
     """Assign fillColor Color based on the population."""
     pop = int(pop['geometry']['population'])
-    color = 'white'
+    color = 'darkblue'
     if pop < 1000000:
         color = 'green'
     if pop < 50000:
@@ -46,7 +45,7 @@ def main():
         city_layer.add_child(
             folium.Marker(
                 location=city['coordinates'],
-                popup=F"{city['name'].replace('’', '')} - {city['population']}",
+                popup=F"{city['name'].replace('’', '')} - {int(city['population']):,}",
                 icon=folium.Icon(color='green')
             )
         )
@@ -60,10 +59,9 @@ def main():
         geojson = folium.GeoJson(
             data=data,
             style_function=population_brackets,
-            popup=lambda x: x['geometry']['population']
         )
 
-        population = json.loads(data)['population']
+        population = f"population: {int(json.loads(data)['population']):,}"
         folium.Popup(population).add_to(geojson)
 
         municipality_layer.add_child(geojson)
@@ -72,7 +70,7 @@ def main():
     _map.add_child(municipality_layer)
     _map.add_child(folium.LayerControl())
 
-    _map.save('map.html')
+    _map.save('index.html')
     _map.show_in_browser()
 
 

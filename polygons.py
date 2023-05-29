@@ -7,7 +7,7 @@ import logging
 import json
 import os
 import requests
-from map import POLYGON_DIRECTORY
+from config import POLYGON_DIRECTORY
 
 
 def get_location_id(location):
